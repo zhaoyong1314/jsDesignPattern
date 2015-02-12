@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="Interface.js"></script>
+    <script type="text/javascript">
+        function Map(){
+        }
+        Map.prototype={
+            zoom:function(){
+                console.log("i begin to zoom");
+            },
+            draw:function(){
+                console.log("i begin to draw");
+            }
+        };
+       var map = new Map();
+       var someone = new Interface('DynamicMap',['zoom','draw']);
+       Interface.ensureImplements(map,someone);
+        map.zoom();
+        map.draw();
+    </script>
+</head>
+<body>
+
+</body>
+</html>
